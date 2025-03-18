@@ -1,0 +1,78 @@
+  <div class="con">
+    <div class="lower-half row graph">
+      <div class="col-md-6 graph1">
+        <ngx-charts-bar-vertical
+          [results]="chartData1"
+          [scheme]="colorScheme1"
+          [xAxis]="false"
+          [yAxis]="true"
+          [legend]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [xAxisLabel]="'Competency'"
+          [yAxisLabel]="'Value'">
+        </ngx-charts-bar-vertical>
+        <!-- <div style="display: block;">
+          <canvas baseChart
+                  [data]="barChartData"
+                  [options]="barChartOptions"
+                  chartType="bar">
+          </canvas>
+        </div> -->
+      </div>
+      <div class="col-md-6 graph2">
+        <ngx-charts-bar-vertical
+          [results]="chartData2"
+          [scheme]="colorScheme2"
+          [xAxis]="false"
+          [yAxis]="true"
+          [legend]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [xAxisLabel]="'Performance Metrics'"
+          [yAxisLabel]="'Value'">
+        </ngx-charts-bar-vertical>
+        <!-- <div style="display: block;">
+          <canvas baseChart
+                  [data]="lineChartData"
+                  [options]="lineChartOptions"
+                  chartType="line">
+          </canvas>
+        </div> -->
+      </div>
+    </div>
+    <div class="department-info" *ngIf="department">
+      <h2>Your Department</h2>
+      <h3>{{ department?.departmentName }}</h3>
+      <p><strong>Manager:</strong> {{ selectedUser?.name }}</p>
+      <p><strong>Email:</strong> {{ selectedUser?.email }}</p>
+      <p><strong>Designation:</strong> {{ selectedUser?.designation }}</p>
+    </div>
+  </div>
+
+  <!-- <div class="dashcontent">
+    <div class="charts">
+      <div class="chart-container">
+        <h3>Expenses</h3>
+        <div style="display: block;">
+          <canvas baseChart
+                  [datasets]="barChartData.datasets"
+                  [labels]="barChartData.labels"
+                  [options]="barChartOptions"
+                  chartType="bar">
+          </canvas>
+        </div>
+      </div>
+      <div class="chart-container">
+        <h3>Income</h3>
+        <div style="display: block;">
+          <canvas baseChart
+                  [datasets]="lineChartData.datasets"
+                  [labels]="lineChartData.labels"
+                  [options]="lineChartOptions"
+                  chartType="line">
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </div> -->

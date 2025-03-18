@@ -1,0 +1,27 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+#inputEmail{
+  margin-bottom: 5px;
+}
+
+#inputPassword{
+  margin-top: 5px;
+}
+
+#registerLink{
+  padding-left: 0;
+}
+  
+.login-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

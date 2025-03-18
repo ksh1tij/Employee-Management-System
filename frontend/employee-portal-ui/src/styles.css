@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+.btn-primary{
+    background-color: #6e4e5f !important;
+    border-color: #bd0061 !important;
+    align-items: flex-end;
+}
+.btn-primary:hover{
+    background-color: #bd0061 !important;
+    border-color: #bd0061 !important;
+    align-items: flex-end;
+}
+.anchor{
+    color: #bd0061;
+}
+.anchor:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+.txt-color-mg{
+    color:#bd0061 ;
+}
+.txt-error{
+    color: red;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

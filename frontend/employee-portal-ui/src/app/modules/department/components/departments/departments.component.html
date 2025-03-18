@@ -1,0 +1,167 @@
+  <!-- <div class="container">
+    <h2>Department</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let department of departments">
+            <h3>{{ department.departmentName }}</h3>
+            <p><strong>Manager:</strong> {{ department.manager.name }}</p>
+            <p><strong>Email:</strong> {{ department.manager.email }}</p>
+            <p><strong>Designation:</strong> {{ department.manager.designation }}</p>
+  
+            <h4>Department Members</h4>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Employee ID</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let member of department.members">
+                  <td>{{ member.name }}</td>
+                  <td>{{ member.email }}</td>
+                  <td>{{ member.employeeId }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="container">
+    <h2>Departments</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="list-group">
+          <li class="list-group-item" *ngIf="departments?.length > 0">
+            <h3 (click)="toggleMembers(departments[0]?.departmentId)"><u>{{ departments[0]?.departmentName }}</u></h3>
+            <p><strong>Manager:</strong> {{ departments[0]?.manager?.name }}</p>
+            <p><strong>Email:</strong> {{ departments[0]?.manager?.email }}</p>
+            <p><strong>Designation:</strong> {{ departments[0]?.manager?.designation }}</p> -->
+  
+            <!-- Members Table -->
+            <!-- <div *ngIf="departments[0]?.showMembers">
+              <h4>Department Members</h4>
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Employee ID</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let member of departments[0]?.members">
+                    <td>{{ member?.name }}</td>
+                    <td>{{ member?.email }}</td>
+                    <td>{{ member?.userId }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container">
+    <h2>Departments</h2>
+    <div class="row">
+      <div class="col-md-12" *ngIf="userRole === 'Manager' || userRole === 'Admin'">
+        <button (click)="openCreateDepartmentModal()" class="btn btn-success mb-3">Create Department</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let department of departments">
+            <div class="d-flex justify-content-between align-items-center">
+              <h3 (click)="toggleMembers(department.departmentId)"><u>{{ department.departmentName }}</u></h3>
+              <div *ngIf="userRole === 'Manager' || userRole === 'Admin'">
+                <button (click)="openEditDepartmentModal(department)" class="btn btn-primary btn-sm me-2">Edit Department</button>
+                <button (click)="confirmDeleteDepartment(department.departmentId)" class="btn btn-danger btn-sm">Delete Department</button>
+              </div>
+            </div>
+  
+            <!-- Department Details -->
+            <div *ngIf="department.showMembers">
+              <p><strong>Department ID:</strong> {{ department.departmentId }}</p>
+              <p><strong>Manager:</strong> {{ department.manager.name }}</p>
+              <p><strong>Email:</strong> {{ department.manager.email }}</p>
+              <p><strong>Designation:</strong> {{ department.manager.designation }}</p>
+              <h4>Department Members</h4>
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Employee ID</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let member of department.members">
+                    <td>{{ member.name }}</td>
+                    <td>{{ member.email }}</td>
+                    <td>{{ member.userId }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal for Creating Department -->
+  <ng-template #createDepartmentModal let-modal>
+    <div class="modal-header">
+      <h5 class="modal-title" id="createDepartmentModalLabel">Create New Department</h5>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <form (ngSubmit)="createDepartment()">
+        <div class="mb-3">
+          <label for="departmentName" class="form-label">Department Name</label>
+          <input type="text" class="form-control" id="departmentName" [(ngModel)]="newDepartmentName" name="departmentName" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </ng-template>
+  
+  <!-- Modal for Editing Department -->
+  <ng-template #editDepartmentModal let-modal>
+    <div class="modal-header">
+      <h5 class="modal-title" id="editDepartmentModalLabel">Edit Department</h5>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <form (ngSubmit)="editDepartment(editDepartmentId)">
+        <div class="mb-3">
+          <label for="editDepartmentName" class="form-label">Department Name</label>
+          <input type="text" class="form-control" id="editDepartmentName" [(ngModel)]="editDepartmentName" name="editDepartmentName" required>
+        </div>
+        <h4>Department Members</h4>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let member of editDepartmentMembers">
+            <span>{{ member.name }} ({{ member.email }})</span>
+            <button (click)="removeUserFromDepartment(member.userId, $event)" class="btn btn-danger btn-sm">Remove</button>
+          </li>
+        </ul>
+        <h4>Add Users</h4>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let user of allUsers">
+            <span>{{ user.name }} ({{ user.email }})</span>
+            <button (click)="addUserToDepartment(user.userId)" class="btn btn-success btn-sm">+</button>
+          </li>
+        </ul>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+    </div>
+  </ng-template>

@@ -1,0 +1,30 @@
+2025-03-08 22:22:03.440 +05:30 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-08 22:22:03.693 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Competencies] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-08 22:22:04.074 +05:30 [INF] User profile is available. Using 'C:\Users\2378311\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-08 22:22:04.341 +05:30 [WRN] The WebRootPath was not found: C:\Code\Employee Portal\backend\EmployeePortal.API\EmployeePortal.API\wwwroot. Static files may be unavailable.
+2025-03-08 22:22:04.571 +05:30 [INF] Now listening on: http://localhost:5246
+2025-03-08 22:22:04.966 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-08 22:22:04.982 +05:30 [INF] Hosting environment: Development
+2025-03-08 22:22:04.995 +05:30 [INF] Content root path: C:\Code\Employee Portal\backend\EmployeePortal.API\EmployeePortal.API
+2025-03-08 22:22:12.878 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/swagger/index.html - null null
+2025-03-08 22:22:14.096 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/swagger/index.html - 200 null text/html;charset=utf-8 1244.0366ms
+2025-03-08 22:22:14.165 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-08 22:22:14.165 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/swagger/index.js - null null
+2025-03-08 22:22:14.218 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 53.7565ms
+2025-03-08 22:22:14.251 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/_vs/browserLink - null null
+2025-03-08 22:22:14.290 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/swagger/index.js - 200 null application/javascript;charset=utf-8 125.707ms
+2025-03-08 22:22:14.535 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/_vs/browserLink - 200 null text/javascript; charset=UTF-8 284.1328ms
+2025-03-08 22:22:14.689 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/swagger/v1/swagger.json - null null
+2025-03-08 22:22:14.886 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 196.7519ms

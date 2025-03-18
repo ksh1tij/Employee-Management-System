@@ -1,0 +1,92 @@
+<div class="container">
+  <h2>User Groups</h2>
+  <div class="row">
+    <div class="col-md-12" *ngIf="userRole === 'Manager' || userRole === 'Admin'">
+      <button (click)="openCreateGroupModal()" class="btn btn-success mb-3">Create User Group</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let group of userGroups">
+          <div class="d-flex justify-content-between align-items-center">
+            <h3 (click)="toggleDetails(group.groupId)"><u>{{ group.groupName }}</u></h3>
+            <div *ngIf="userRole === 'Manager' || userRole === 'Admin'">
+              <button (click)="openEditGroupModal(group)" class="btn btn-primary btn-sm me-2">Edit Group</button>
+              <button (click)="confirmDeleteGroup(group.groupId)" class="btn btn-danger btn-sm">Delete Group</button>
+            </div>
+          </div>
+
+          <!-- Group Details -->
+          <div *ngIf="group.showDetails">
+            <p><strong>Group ID:</strong> {{ group.groupId }}</p>
+            <!-- Add more details as needed -->
+            <h4>Group Members</h4>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let member of group.members">
+                  <td>{{ member.name }}</td>
+                  <td>{{ member.email }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Creating Group -->
+<ng-template #createGroupModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title" id="createGroupModalLabel">Create New User Group</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form (ngSubmit)="createGroup()">
+      <div class="mb-3">
+        <label for="groupName" class="form-label">Group Name</label>
+        <input type="text" class="form-control" id="groupName" [(ngModel)]="newGroupName" name="groupName" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</ng-template>
+
+<!-- Modal for Editing Group -->
+<ng-template #editGroupModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title" id="editGroupModalLabel">Edit User Group</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form (ngSubmit)="editGroup(editGroupId)">
+      <div class="mb-3">
+        <label for="editGroupName" class="form-label">Group Name</label>
+        <input type="text" class="form-control" id="editGroupName" [(ngModel)]="editGroupName" name="editGroupName" required>
+      </div>
+      <h4>Group Members</h4>
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let member of editGroupMembers">
+          <span>{{ member.name }} ({{ member.email }})</span>
+          <button (click)="removeUserFromGroup(member.userId, $event)" class="btn btn-danger btn-sm">Remove</button>
+        </li>
+      </ul>
+      <h4>Add Users</h4>
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let user of allUsers">
+          <span>{{ user.name }} ({{ user.email }})</span>
+          <button (click)="addUserToGroup(user.userId)" class="btn btn-success btn-sm">+</button>
+        </li>
+      </ul>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+  </div>
+</ng-template>

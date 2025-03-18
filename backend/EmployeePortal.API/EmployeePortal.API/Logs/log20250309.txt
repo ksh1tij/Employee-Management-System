@@ -1,0 +1,60 @@
+2025-03-09 14:05:59.101 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-09 14:05:59.403 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Competencies] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-09 14:06:00.020 +05:30 [INF] User profile is available. Using 'C:\Users\2378311\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-09 14:06:00.335 +05:30 [WRN] The WebRootPath was not found: C:\Code\Employee Portal\backend\EmployeePortal.API\EmployeePortal.API\wwwroot. Static files may be unavailable.
+2025-03-09 14:06:00.527 +05:30 [INF] Now listening on: http://localhost:5246
+2025-03-09 14:06:00.799 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-09 14:06:00.818 +05:30 [INF] Hosting environment: Development
+2025-03-09 14:06:00.829 +05:30 [INF] Content root path: C:\Code\Employee Portal\backend\EmployeePortal.API\EmployeePortal.API
+2025-03-09 14:06:01.546 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/swagger/index.html - null null
+2025-03-09 14:06:02.324 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/swagger/index.html - 200 null text/html;charset=utf-8 805.1307ms
+2025-03-09 14:06:02.442 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/swagger/index.js - null null
+2025-03-09 14:06:02.532 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/_vs/browserLink - null null
+2025-03-09 14:06:02.695 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-09 14:06:02.714 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/swagger/index.js - 200 null application/javascript;charset=utf-8 272.8801ms
+2025-03-09 14:06:02.773 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 78.1141ms
+2025-03-09 14:06:02.976 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/_vs/browserLink - 200 null text/javascript; charset=UTF-8 444.1841ms
+2025-03-09 14:06:04.361 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/swagger/v1/swagger.json - null null
+2025-03-09 14:06:04.515 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 155.1225ms
+2025-03-09 21:57:46.895 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-09 21:57:47.203 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Competencies] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-09 21:57:47.465 +05:30 [INF] User profile is available. Using 'C:\Users\2378311\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-09 21:57:47.612 +05:30 [WRN] The WebRootPath was not found: C:\Code\Employee Portal\backend\EmployeePortal.API\EmployeePortal.API\wwwroot. Static files may be unavailable.
+2025-03-09 21:57:47.769 +05:30 [INF] Now listening on: http://localhost:5246
+2025-03-09 21:57:47.874 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-09 21:57:47.883 +05:30 [INF] Hosting environment: Development
+2025-03-09 21:57:47.888 +05:30 [INF] Content root path: C:\Code\Employee Portal\backend\EmployeePortal.API\EmployeePortal.API
+2025-03-09 21:57:48.691 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/swagger/index.html - null null
+2025-03-09 21:57:49.497 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/swagger/index.html - 200 null text/html;charset=utf-8 825.1088ms
+2025-03-09 21:57:49.567 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-09 21:57:49.573 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/_vs/browserLink - null null
+2025-03-09 21:57:49.573 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/swagger/index.js - null null
+2025-03-09 21:57:49.618 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 51.0152ms
+2025-03-09 21:57:49.651 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/swagger/index.js - 200 null application/javascript;charset=utf-8 78.762ms
+2025-03-09 21:57:49.747 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/_vs/browserLink - 200 null text/javascript; charset=UTF-8 177.2998ms
+2025-03-09 21:57:50.182 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5246/swagger/v1/swagger.json - null null
+2025-03-09 21:57:50.231 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5246/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.3226ms

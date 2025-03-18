@@ -1,0 +1,107 @@
+<div class="container">
+  <h2>Performance Metrics</h2>
+  <div class="data-container">
+    <table mat-table [dataSource]="performanceMetrics" class="mat-elevation-z8 table table-hover">
+      <ng-container matColumnDef="attendanceRate">
+        <th mat-header-cell *matHeaderCellDef> Attendance Rate </th>
+        <td mat-cell *matCellDef="let element"> {{element.attendanceRate}} </td>
+      </ng-container>
+      <ng-container matColumnDef="customerSatisfaction">
+        <th mat-header-cell *matHeaderCellDef> Customer Satisfaction </th>
+        <td mat-cell *matCellDef="let element"> {{element.customerSatisfaction}} </td>
+      </ng-container>
+      <ng-container matColumnDef="efficiency">
+        <th mat-header-cell *matHeaderCellDef> Efficiency </th>
+        <td mat-cell *matCellDef="let element"> {{element.efficiency}} </td>
+      </ng-container>
+      <ng-container matColumnDef="qualityOfWork">
+        <th mat-header-cell *matHeaderCellDef> Quality of Work </th>
+        <td mat-cell *matCellDef="let element"> {{element.qualityOfWork}} </td>
+      </ng-container>
+      <ng-container matColumnDef="taskCompletionRate">
+        <th mat-header-cell *matHeaderCellDef> Task Completion Rate </th>
+        <td mat-cell *matCellDef="let element"> {{element.taskCompletionRate}} </td>
+      </ng-container>
+      <ng-container matColumnDef="teamwork">
+        <th mat-header-cell *matHeaderCellDef> Teamwork </th>
+        <td mat-cell *matCellDef="let element"> {{element.teamwork}} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <div class="graph-container">
+    <div class="col-6 mx-auto">
+      <ngx-charts-bar-vertical
+        [results]="chartData1"
+               [legend]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="'Category'"
+        [yAxisLabel]="'Value'">
+      </ngx-charts-bar-vertical>
+    </div>
+  </div>
+</div>
+
+<div class="container card-container">
+  <h2>Users Under Manager</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let user of usersUnderManager">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">User Name: {{ userNames[user.userId] }}</h3>
+          <ng-container *ngIf="user.performanceMetrics; else noMetrics">
+            <p class="card-text"><strong>Task Completion Rate:</strong> {{ user.performanceMetrics.taskCompletionRate }}%</p>
+            <p class="card-text"><strong>Quality of Work:</strong> {{ user.performanceMetrics.qualityOfWork }}%</p>
+            <p class="card-text"><strong>Attendance Rate:</strong> {{ user.performanceMetrics.attendanceRate }}%</p>
+            <p class="card-text"><strong>Customer Satisfaction:</strong> {{ user.performanceMetrics.customerSatisfaction }}%</p>
+            <p class="card-text"><strong>Efficiency:</strong> {{ user.performanceMetrics.efficiency }}%</p>
+            <p class="card-text"><strong>Teamwork:</strong> {{ user.performanceMetrics.teamwork }}%</p>
+          </ng-container>
+          <ng-template #noMetrics>
+            <p class="card-text">No performance metrics</p>
+            <button class="btn btn-primary" (click)="openModal(user.userId)">+</button>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for User Information -->
+<ng-template #userInfoModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title" id="userInfoModalLabel">Update User Information</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form (ngSubmit)="postPerformanceMetric()">
+      <div class="mb-3">
+        <label for="taskCompletionRate" class="form-label">Task Completion Rate</label>
+        <input type="number" class="form-control" id="taskCompletionRate" [(ngModel)]="newPerformanceMetric.taskCompletionRate" name="taskCompletionRate">
+      </div>
+      <div class="mb-3">
+        <label for="qualityOfWork" class="form-label">Quality of Work</label>
+        <input type="number" class="form-control" id="qualityOfWork" [(ngModel)]="newPerformanceMetric.qualityOfWork" name="qualityOfWork">
+      </div>
+      <div class="mb-3">
+        <label for="attendanceRate" class="form-label">Attendance Rate</label>
+        <input type="number" class="form-control" id="attendanceRate" [(ngModel)]="newPerformanceMetric.attendanceRate" name="attendanceRate">
+      </div>
+      <div class="mb-3">
+        <label for="customerSatisfaction" class="form-label">Customer Satisfaction</label>
+        <input type="number" class="form-control" id="customerSatisfaction" [(ngModel)]="newPerformanceMetric.customerSatisfaction" name="customerSatisfaction">
+      </div>
+      <div class="mb-3">
+        <label for="efficiency" class="form-label">Efficiency</label>
+        <input type="number" class="form-control" id="efficiency" [(ngModel)]="newPerformanceMetric.efficiency" name="efficiency">
+      </div>
+      <div class="mb-3">
+        <label for="teamwork" class="form-label">Teamwork</label>
+        <input type="number" class="form-control" id="teamwork" [(ngModel)]="newPerformanceMetric.teamwork" name="teamwork">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</ng-template>

@@ -1,0 +1,43 @@
+<!-- <div class="form-container">
+    <form class="form-signin login-form"  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <h3 class="txt-color-mg">Sign in</h3>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" formControlName="email" required autofocus>
+      <label for="inputPassword" class="sr-only mt-2">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" formControlName="password" required>
+      <div class="row">
+        <div class="col-4">
+          <button class="btn btn-lg btn-primary btn-block mt-2 right-corner" type="submit">Log in</button>
+        </div>
+      </div>
+      <div class="col-4 mt-2 anchor" id="registerLink" (click)="openRegistrationPage()">New User?</div>
+    </form>
+  </div> -->
+
+  <div class="form-container">
+    <form class="form-signin login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <h3 class="txt-color-mg">Sign in</h3>
+      
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" formControlName="email" required autofocus>
+      <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)" class="text-danger">
+        <div *ngIf="loginForm.get('email')?.errors?.['required']">Email is required.</div>
+        <div *ngIf="loginForm.get('email')?.errors?.['email']">Invalid email address.</div>
+      </div>
+      
+      <label for="inputPassword" class="sr-only mt-2">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" formControlName="password" required>
+      <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)" class="text-danger">
+        <div *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</div>
+        <div *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters long.</div>
+      </div>
+      
+      <div class="row">
+        <div class="col-4">
+          <button class="btn btn-lg btn-primary btn-block mt-2 right-corner" type="submit">Log in</button>
+        </div>
+      </div>
+      
+      <div class="col-4 mt-2 anchor" id="registerLink" (click)="openRegistrationPage()">New User?</div>
+    </form>
+  </div>
