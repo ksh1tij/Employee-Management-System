@@ -9,12 +9,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { environment } from './environments/environment';
 import { BASE_URL, TOASTER_CONFIG } from './app/app.config';
 import { InitService } from './app/init.service';
 import { provideAppInitializer } from '@angular/core';
 import { provideToastr } from 'ngx-toastr';
+import { authInterceptor } from './app/core/interceptors/http.interceptor';
 
 registerLocaleData(en);
 
@@ -26,7 +27,7 @@ bootstrapApplication(AppComponent, {
   providers: [
     importProvidersFrom(RouterModule, AppRoutingModule, ReactiveFormsModule, FormsModule),
     provideAnimations(),
-    provideHttpClient(),
+    provideHttpClient(withInterceptors([authInterceptor])),
     provideToastr(),
     { provide: BASE_URL, useValue: environment.apiUrl },
     {

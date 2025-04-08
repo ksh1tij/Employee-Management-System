@@ -39,7 +39,7 @@ namespace EmployeePortal.API.Controllers
 
         // GET: api/UserGroups/User/{userId}
         [HttpGet("User/{userId}")]
-        //[Authorize(Roles = "Admin,Manager,User")]
+        [Authorize(Roles = "Admin,Manager,User")]
         public async Task<ActionResult<IEnumerable<UserGroup>>> GetUserGroups(int userId)
         {
             var currentUserId = await _context.Users
@@ -70,7 +70,7 @@ namespace EmployeePortal.API.Controllers
 
         // GET: api/UserGroups/Manager/{managerId}
         [HttpGet("Manager/{managerId}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<ActionResult<IEnumerable<User>>> GetUsersUnderManager(int managerId)
         {
             var departments = await _context.Departments
@@ -97,7 +97,7 @@ namespace EmployeePortal.API.Controllers
 
         // POST: api/UserGroups
         [HttpPost]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<ActionResult<UserGroup>> PostUserGroup(UserGroupDto userGroupDto)
         {
             var userGroup = new UserGroup
@@ -121,7 +121,7 @@ namespace EmployeePortal.API.Controllers
 
         // DELETE: api/UserGroups/{id}
         [HttpDelete("{id}")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteUserGroup(int id)
         {
             var userGroup = await _context.UserGroups.FindAsync(id);
@@ -145,7 +145,7 @@ namespace EmployeePortal.API.Controllers
 
         // PATCH: api/UserGroups/{id}
         [HttpPatch("{id}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> PatchUserGroup(int id, [FromBody] UserGroupDto userGroupDto)
         {
             if (userGroupDto == null)

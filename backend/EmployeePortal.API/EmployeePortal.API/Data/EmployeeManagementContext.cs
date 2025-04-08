@@ -7,18 +7,19 @@ namespace EmployeePortal.API.Data
 {
     public class EmployeeManagementContext : DbContext
     {
+        public EmployeeManagementContext() { }
         public EmployeeManagementContext(DbContextOptions<EmployeeManagementContext> options)
         : base(options)
         {
         }
 
-        public DbSet<User> Users { get; set; }
+        public virtual DbSet<User> Users { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<UserGroup> UserGroups { get; set; }
         public DbSet<UserDepartment> UserDepartments { get; set; }
         public DbSet<UserGroupMember> UserGroupMembers { get; set; }
         public DbSet<PerformanceMetric> PerformanceMetrics { get; set; }
-        public DbSet<Competency> Competencies { get; set; }
+        public virtual DbSet<Competency> Competencies { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Payslip> Payslips { get; set; }
 

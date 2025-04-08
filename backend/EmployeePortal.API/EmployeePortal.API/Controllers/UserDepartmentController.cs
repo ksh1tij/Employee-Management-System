@@ -40,7 +40,7 @@ namespace EmployeePortal.API.Controllers
 
         // GET: api/UserDepartments/User/{userId}
         [HttpGet("User/{userId}")]
-        //[Authorize(Roles = "Admin,Manager,User")]
+        [Authorize(Roles = "Admin,Manager,User")]
         public async Task<ActionResult<IEnumerable<UserDepartment>>> GetUserDepartments(int userId)
         {
             //var usernameClaim = GetCurrentUser();
@@ -72,7 +72,7 @@ namespace EmployeePortal.API.Controllers
 
         // GET: api/UserDepartments/Manager/{managerId}
         [HttpGet("Manager/{managerId}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<ActionResult<IEnumerable<User>>> GetUsersUnderManager(int managerId)
         {
             var departments = await _context.Departments
@@ -93,7 +93,7 @@ namespace EmployeePortal.API.Controllers
 
         // POST: api/UserDepartments
         [HttpPost]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<ActionResult<UserDepartment>> PostUserDepartment(UserDepartmentDto userDepartmentDto)
         {
             var user = await _context.Users.FindAsync(userDepartmentDto.UserId);
@@ -126,7 +126,7 @@ namespace EmployeePortal.API.Controllers
 
         // DELETE: api/UserDepartments/{userId}/{departmentId}
         [HttpDelete("{userId}/{departmentId}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> DeleteUserDepartment(int userId, int departmentId)
         {
             var userDepartment = await _context.UserDepartments
@@ -144,7 +144,7 @@ namespace EmployeePortal.API.Controllers
 
         // PATCH: api/UserDepartments/{userId}/{departmentId}
         [HttpPatch("{userId}/{departmentId}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> PatchUserDepartment(int userId, int departmentId, [FromBody] UserDepartmentDto userDepartmentDto)
         {
             if (userDepartmentDto == null)

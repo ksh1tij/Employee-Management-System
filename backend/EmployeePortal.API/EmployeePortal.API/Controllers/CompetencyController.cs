@@ -27,7 +27,7 @@ namespace EmployeePortal.API.Controllers
 
         // GET: api/Competencies/User/{userId}
         [HttpGet("User/{userId}")]
-        //[Authorize(Roles = "Admin,Manager,User")]
+        [Authorize(Roles = "Admin,Manager,User")]
         public async Task<ActionResult<IEnumerable<CompetencyDto>>> GetUserCompetencies(int userId)
         {
             _logger.LogInformation("Getting competencies for user with ID {UserId}", userId);
@@ -58,7 +58,7 @@ namespace EmployeePortal.API.Controllers
 
         // GET: api/Competencies/Manager/{managerId}
         [HttpGet("Manager/{managerId}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<ActionResult<IEnumerable<Competency>>> GetUsersUnderManager(int managerId)
         {
             _logger.LogInformation("Getting competencies for users under manager with ID {ManagerId}", managerId);
@@ -95,7 +95,7 @@ namespace EmployeePortal.API.Controllers
 
         // POST: api/Competencies
         [HttpPost]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<ActionResult<Competency>> PostCompetency(CompetencyDto competencyDto)
         {
             _logger.LogInformation("Creating new competency for user with ID {UserId}", competencyDto.UserId);
@@ -141,7 +141,7 @@ namespace EmployeePortal.API.Controllers
 
         // DELETE: api/Competencies/{id}
         [HttpDelete("{id}")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteCompetency(int id)
         {
             _logger.LogInformation("Deleting competency with ID {CompetencyId}", id);
@@ -162,7 +162,7 @@ namespace EmployeePortal.API.Controllers
 
         // PATCH: api/Competencies/{id}
         [HttpPatch("{id}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> PatchCompetency(int id, [FromBody] CompetencyDto competencyDto)
         {
             _logger.LogInformation("Patching competency with ID {CompetencyId}", id);

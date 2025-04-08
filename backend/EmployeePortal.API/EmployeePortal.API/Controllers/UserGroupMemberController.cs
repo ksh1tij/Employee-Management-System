@@ -38,7 +38,7 @@ namespace EmployeePortal.API.Controllers
 
         // GET: api/UserGroupMembers/Manager/{managerId}
         [HttpGet("Manager/{managerId}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<ActionResult<IEnumerable<UserGroupMember>>> GetUserGroupMembersUnderManager(int managerId)
         {
             var departments = await _context.Departments
@@ -65,7 +65,7 @@ namespace EmployeePortal.API.Controllers
 
         // POST: api/UserGroupMembers
         [HttpPost]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<ActionResult<UserGroupMember>> PostUserGroupMember(UserGroupMemberDto userGroupMemberDto)
         {
             var user = await _context.Users.FindAsync(userGroupMemberDto.UserId);
@@ -91,7 +91,7 @@ namespace EmployeePortal.API.Controllers
 
         // DELETE: api/UserGroupMembers/{userId}/{groupId}
         [HttpDelete("{userId}/{groupId}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> DeleteUserGroupMember(int userId, int groupId)
         {
             var userGroupMember = await _context.UserGroupMembers
@@ -109,7 +109,7 @@ namespace EmployeePortal.API.Controllers
 
         // PATCH: api/UserGroupMembers/{userId}/{groupId}
         [HttpPatch("{userId}/{groupId}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> PatchUserGroupMember(int userId, int groupId, [FromBody] UserGroupMemberDto userGroupMemberDto)
         {
             if (userGroupMemberDto == null)

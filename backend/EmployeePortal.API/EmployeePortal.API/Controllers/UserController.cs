@@ -28,7 +28,7 @@ namespace EmployeePortal.API.Controllers
 
         // GET: api/Users
         [HttpGet]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<ActionResult<IEnumerable<UserDto>>> GetUsers()
         {
             var users = await _context.Users
@@ -52,7 +52,7 @@ namespace EmployeePortal.API.Controllers
 
         // GET: api/Users/{id}
         [HttpGet("{id}")]
-        //[Authorize(Roles = "Admin,Manager,User")]
+        [Authorize(Roles = "Admin,Manager,User")]
         public async Task<ActionResult<UserDto>> GetUser(int id)
         {
             //var usernameClaim = GetCurrentUser();
@@ -97,7 +97,7 @@ namespace EmployeePortal.API.Controllers
 
         // POST: api/Users
         [HttpPost]
-        //[Authorize(Roles = "User")]
+        [Authorize(Roles = "User")]
         public async Task<ActionResult<User>> PostUser(UserDto userDto)
         {
             var passwordHelper = new PasswordHelper(_configuration);
@@ -127,7 +127,7 @@ namespace EmployeePortal.API.Controllers
 
         // DELETE: api/Users/{id}
         [HttpDelete("{id}")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
@@ -144,7 +144,7 @@ namespace EmployeePortal.API.Controllers
 
         // PATCH: api/Users/{id}
         [HttpPatch("{id}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> PatchUser(int id, [FromBody] PatchUserRequest request)
         {
             if (request == null)
@@ -221,7 +221,7 @@ namespace EmployeePortal.API.Controllers
         //}
 
         [HttpPost("upload-excel")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UploadExcel(IFormFile file)
         {
             if (file == null || file.Length == 0)

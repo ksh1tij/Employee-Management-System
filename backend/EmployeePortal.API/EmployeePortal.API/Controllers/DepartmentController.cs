@@ -22,7 +22,7 @@ namespace EmployeePortal.API.Controllers
 
         // GET: api/Departments
         [HttpGet]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<ActionResult<IEnumerable<Department>>> GetDepartments()
         {
             return await _context.Departments.ToListAsync();
@@ -30,7 +30,7 @@ namespace EmployeePortal.API.Controllers
 
         // GET: api/Departments/{id}
         [HttpGet("{id}")]
-        //[Authorize(Roles = "Admin,Manager,User")]
+        [Authorize(Roles = "Admin,Manager,User")]
         public async Task<ActionResult<Department>> GetDepartment(int id)
         {
             var department = await _context.Departments.FindAsync(id);
@@ -45,7 +45,7 @@ namespace EmployeePortal.API.Controllers
 
         // POST: api/Departments
         [HttpPost]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<ActionResult<Department>> PostDepartment(DepartmentDto departmentDto)
         {
             var manager = await _context.Users.FindAsync(departmentDto.ManagerId);
@@ -71,7 +71,7 @@ namespace EmployeePortal.API.Controllers
 
         // DELETE: api/Departments/{id}
         [HttpDelete("{id}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> DeleteDepartment(int id)
         {
             var department = await _context.Departments.FindAsync(id);
@@ -88,7 +88,7 @@ namespace EmployeePortal.API.Controllers
 
         // PATCH: api/Departments/{id}
         [HttpPatch("{id}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> PatchDepartment(int id, [FromBody] DepartmentDto departmentDto)
         {
             if (departmentDto == null)

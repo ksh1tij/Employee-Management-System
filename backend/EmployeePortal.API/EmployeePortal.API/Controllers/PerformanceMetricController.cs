@@ -24,7 +24,7 @@ namespace EmployeePortal.API.Controllers
 
         // GET: api/PerformanceMetrics/User/{userId}
         [HttpGet("User/{userId}")]
-        //[Authorize(Roles = "Admin,Manager,User")]
+        [Authorize(Roles = "Admin,Manager,User")]
         public async Task<ActionResult<IEnumerable<PerformanceMetric>>> GetUserPerformanceMetrics(int userId)
         {
             //var usernameClaim = GetCurrentUser();
@@ -70,7 +70,7 @@ namespace EmployeePortal.API.Controllers
 
         // GET: api/PerformanceMetrics/Manager/{managerId}
         [HttpGet("Manager/{managerId}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<ActionResult<IEnumerable<PerformanceMetric>>> GetUsersUnderManager(int managerId)
         {
             var performanceMetrics = await _context.PerformanceMetrics
@@ -87,7 +87,7 @@ namespace EmployeePortal.API.Controllers
 
         // POST: api/PerformanceMetrics
         [HttpPost]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<ActionResult<PerformanceMetric>> PostPerformanceMetric(PerformanceMetricDto performanceMetricDto)
         {
             var user = await _context.Users.FindAsync(performanceMetricDto.UserId);
@@ -129,7 +129,7 @@ namespace EmployeePortal.API.Controllers
 
         // DELETE: api/PerformanceMetrics/{id}
         [HttpDelete("{id}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> DeletePerformanceMetric(int id)
         {
             var performanceMetric = await _context.PerformanceMetrics.FindAsync(id);
@@ -146,7 +146,7 @@ namespace EmployeePortal.API.Controllers
 
         // PATCH: api/PerformanceMetrics/{id}
         [HttpPatch("{id}")]
-        //[Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> PatchPerformanceMetric(int id, [FromBody] PerformanceMetricDto performanceMetricDto)
         {
             if (performanceMetricDto == null)
