@@ -18556,3 +18556,1566 @@ WHERE [u].[UserId] = @__id_0
 SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
 FROM [Users] AS [u]
 WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:11:47.777 GMT 1	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (51ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END	
+[2025-03-19 08:11:48.030 GMT 1	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Competencies] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END	
+[2025-03-19 08:11:48.735 GMT 1	Warning	WebRootPathNotFound	Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware]	The WebRootPath was not found: C:\Code\Employee Portal\backend\EmployeePortal.API\EmployeePortal.API\wwwroot. Static files may be unavailable.	
+[2025-03-19 08:11:48.933 GMT 1	Information	ListeningOnAddress	Microsoft.Hosting.Lifetime]	Now listening on: http://localhost:5246	
+[2025-03-19 08:11:49.352 GMT 1	Information	0	Microsoft.Hosting.Lifetime]	Application started. Press Ctrl+C to shut down.	
+[2025-03-19 08:11:49.369 GMT 1	Information	0	Microsoft.Hosting.Lifetime]	Hosting environment: Development	
+[2025-03-19 08:11:49.381 GMT 1	Information	0	Microsoft.Hosting.Lifetime]	Content root path: C:\Code\Employee Portal\backend\EmployeePortal.API\EmployeePortal.API	
+[2025-03-19 08:12:02.011 GMT 14	Warning	FailedToDeterminePort	Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware]	Failed to determine the https port for redirect.	
+[2025-03-19 08:12:04.270 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (170ms) [Parameters=[@__request_Email_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__request_Email_0	
+[2025-03-19 08:12:05.338 GMT 17	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 27	
+[2025-03-19 08:12:05.592 GMT 10	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:12:05.669 GMT 14	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (23ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 08:12:05.730 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 08:12:05.743 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 08:12:05.766 GMT 7	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	Competency with ID 27 not found	
+[2025-03-19 08:12:12.991 GMT 7	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 27	
+[2025-03-19 08:12:13.187 GMT 10	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:12:13.211 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 08:12:13.221 GMT 10	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 08:12:13.228 GMT 16	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 08:12:13.253 GMT 16	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	Competency with ID 27 not found	
+[2025-03-19 08:12:16.990 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:12:17.036 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:12:18.843 GMT 14	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:12:18.849 GMT 16	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 27	
+[2025-03-19 08:12:18.859 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 08:12:18.867 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 08:12:18.874 GMT 14	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 08:12:18.891 GMT 14	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	Competency with ID 27 not found	
+[2025-03-19 08:12:25.705 GMT 10	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 27	
+[2025-03-19 08:12:25.714 GMT 9	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (79ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:12:25.742 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 08:12:25.776 GMT 9	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 08:12:25.787 GMT 14	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (21ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 08:12:25.815 GMT 14	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	Competency with ID 27 not found	
+[2025-03-19 08:12:33.342 GMT 17	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 27	
+[2025-03-19 08:12:33.364 GMT 16	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 08:12:33.373 GMT 16	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	Competency with ID 27 not found	
+[2025-03-19 08:12:33.512 GMT 14	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (16ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 08:13:12.761 GMT 17	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 27	
+[2025-03-19 08:13:12.826 GMT 14	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 08:13:12.837 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (36ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 08:13:12.841 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:13:12.845 GMT 14	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	Competency with ID 27 not found	
+[2025-03-19 08:13:12.859 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 08:13:13.597 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:13:13.607 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:13:22.133 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__request_Email_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__request_Email_0	
+[2025-03-19 08:13:22.279 GMT 24	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 38	
+[2025-03-19 08:13:22.296 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (17ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:13:22.304 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 08:13:22.308 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 08:13:22.314 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 08:13:22.320 GMT 23	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	Competency with ID 38 not found	
+[2025-03-19 08:13:27.625 GMT 24	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 38	
+[2025-03-19 08:13:27.633 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 08:13:27.643 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 08:13:27.651 GMT 5	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	Competency with ID 38 not found	
+[2025-03-19 08:15:08.450 GMT 24	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 38	
+[2025-03-19 08:15:08.478 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 08:15:08.485 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (12ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 08:15:08.489 GMT 24	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	Competency with ID 38 not found	
+[2025-03-19 08:15:11.023 GMT 16	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 38	
+[2025-03-19 08:15:11.060 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 08:15:11.080 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (12ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 08:15:11.085 GMT 24	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	Competency with ID 38 not found	
+[2025-03-19 08:15:14.350 GMT 16	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 08:15:43.507 GMT 14	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 2	
+[2025-03-19 08:15:43.532 GMT 16	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (9ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 08:15:43.537 GMT 10	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 08:15:43.738 GMT 16	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (49ms) [Parameters=[@__userIds_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userIds_0) WITH ([value] int '$') AS [u0]
+)	
+[2025-03-19 08:15:43.984 GMT 10	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:15:43.992 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:15:44.000 GMT 23	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competencies for user with ID 10	
+[2025-03-19 08:15:44.073 GMT 9	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competencies for user with ID 1	
+[2025-03-19 08:15:44.119 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:15:44.133 GMT 16	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (13ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[UserId], [c].[TechnicalSkills], [c].[Communication], [c].[ProblemSolving], [c].[Teamwork], [c].[Leadership], [c].[LastUpdated], [c].[ManagerId]
+FROM [Competencies] AS [c]
+WHERE [c].[UserId] = @__userId_0	
+[2025-03-19 08:15:44.148 GMT 10	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:15:44.159 GMT 9	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[UserId], [c].[TechnicalSkills], [c].[Communication], [c].[ProblemSolving], [c].[Teamwork], [c].[Leadership], [c].[LastUpdated], [c].[ManagerId]
+FROM [Competencies] AS [c]
+WHERE [c].[UserId] = @__userId_0	
+[2025-03-19 08:15:44.210 GMT 9	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	No competencies found for user with ID 1	
+[2025-03-19 08:17:28.216 GMT 10	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:17:28.228 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:17:28.301 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]	
+[2025-03-19 08:17:28.366 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:17:28.378 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:17:29.321 GMT 10	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 2	
+[2025-03-19 08:17:29.360 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:17:29.367 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 08:17:29.376 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 08:17:29.381 GMT 16	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 08:17:29.486 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:17:29.502 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:20:13.083 GMT 1	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END	
+[2025-03-19 08:20:13.139 GMT 1	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Competencies] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END	
+[2025-03-19 08:20:13.889 GMT 1	Warning	WebRootPathNotFound	Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware]	The WebRootPath was not found: C:\Code\Employee Portal\backend\EmployeePortal.API\EmployeePortal.API\wwwroot. Static files may be unavailable.	
+[2025-03-19 08:20:14.072 GMT 1	Information	ListeningOnAddress	Microsoft.Hosting.Lifetime]	Now listening on: http://localhost:5246	
+[2025-03-19 08:20:14.313 GMT 1	Information	0	Microsoft.Hosting.Lifetime]	Application started. Press Ctrl+C to shut down.	
+[2025-03-19 08:20:14.325 GMT 1	Information	0	Microsoft.Hosting.Lifetime]	Hosting environment: Development	
+[2025-03-19 08:20:14.336 GMT 1	Information	0	Microsoft.Hosting.Lifetime]	Content root path: C:\Code\Employee Portal\backend\EmployeePortal.API\EmployeePortal.API	
+[2025-03-19 08:20:22.359 GMT 10	Warning	FailedToDeterminePort	Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware]	Failed to determine the https port for redirect.	
+[2025-03-19 08:20:22.682 GMT 16	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (33ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:20:22.741 GMT 10	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:20:22.992 GMT 16	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]	
+[2025-03-19 08:20:23.097 GMT 11	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:20:23.120 GMT 9	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:20:24.042 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:20:24.059 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[GroupId]
+FROM [UserGroupMembers] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:20:24.122 GMT 11	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__userGroups_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[GroupId], [u].[GroupName]
+FROM [UserGroups] AS [u]
+WHERE [u].[GroupId] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userGroups_0) WITH ([value] int '$') AS [u0]
+)	
+[2025-03-19 08:20:25.033 GMT 16	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:20:25.051 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 08:20:25.139 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (17ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 08:20:25.189 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__userIds_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userIds_0) WITH ([value] int '$') AS [u0]
+)	
+[2025-03-19 08:20:25.441 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:20:25.506 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:20:25.543 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:20:25.552 GMT 11	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:20:25.559 GMT 10	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:20:25.680 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:20:25.692 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 08:20:25.698 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 08:20:26.296 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 08:20:26.312 GMT 16	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__userIds_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userIds_0) WITH ([value] int '$') AS [u0]
+)	
+[2025-03-19 08:20:26.314 GMT 22	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 2	
+[2025-03-19 08:20:26.459 GMT 9	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:20:26.481 GMT 10	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:20:26.548 GMT 5	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competencies for user with ID 10	
+[2025-03-19 08:20:26.562 GMT 15	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competencies for user with ID 1	
+[2025-03-19 08:20:26.578 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 08:20:26.584 GMT 10	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[UserId], [c].[TechnicalSkills], [c].[Communication], [c].[ProblemSolving], [c].[Teamwork], [c].[Leadership], [c].[LastUpdated], [c].[ManagerId]
+FROM [Competencies] AS [c]
+WHERE [c].[UserId] = @__userId_0	
+[2025-03-19 08:20:26.604 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[UserId], [c].[TechnicalSkills], [c].[Communication], [c].[ProblemSolving], [c].[Teamwork], [c].[Leadership], [c].[LastUpdated], [c].[ManagerId]
+FROM [Competencies] AS [c]
+WHERE [c].[UserId] = @__userId_0	
+[2025-03-19 08:20:26.609 GMT 10	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	No competencies found for user with ID 1	
+[2025-03-19 08:20:26.614 GMT 11	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:20:26.632 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 08:20:28.591 GMT 11	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 08:20:28.600 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userIds_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userIds_0) WITH ([value] int '$') AS [u0]
+)	
+[2025-03-19 08:20:30.741 GMT 23	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 2	
+[2025-03-19 08:20:30.755 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 08:20:30.778 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 08:20:30.792 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 08:20:30.799 GMT 9	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 08:20:30.892 GMT 11	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 09:58:17.643 GMT 1	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END	
+[2025-03-19 09:58:17.810 GMT 1	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Competencies] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END	
+[2025-03-19 09:58:18.507 GMT 1	Warning	WebRootPathNotFound	Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware]	The WebRootPath was not found: C:\Code\Employee Portal\backend\EmployeePortal.API\EmployeePortal.API\wwwroot. Static files may be unavailable.	
+[2025-03-19 09:58:18.692 GMT 1	Information	ListeningOnAddress	Microsoft.Hosting.Lifetime]	Now listening on: http://localhost:5246	
+[2025-03-19 09:58:19.002 GMT 1	Information	0	Microsoft.Hosting.Lifetime]	Application started. Press Ctrl+C to shut down.	
+[2025-03-19 09:58:19.066 GMT 1	Information	0	Microsoft.Hosting.Lifetime]	Hosting environment: Development	
+[2025-03-19 09:58:19.161 GMT 1	Information	0	Microsoft.Hosting.Lifetime]	Content root path: C:\Code\Employee Portal\backend\EmployeePortal.API\EmployeePortal.API	
+[2025-03-19 10:17:36.619 GMT 10	Warning	FailedToDeterminePort	Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware]	Failed to determine the https port for redirect.	
+[2025-03-19 10:17:38.816 GMT 18	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (173ms) [Parameters=[@__request_Email_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__request_Email_0	
+[2025-03-19 10:17:39.578 GMT 17	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 38	
+[2025-03-19 10:17:39.722 GMT 16	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:17:39.782 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:17:39.820 GMT 10	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 10:17:39.842 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (17ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 10:17:39.847 GMT 10	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	Competency with ID 38 not found	
+[2025-03-19 10:17:54.487 GMT 16	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 2	
+[2025-03-19 10:17:54.501 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:17:54.540 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 10:17:54.558 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:17:54.575 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 10:17:54.961 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (15ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:17:55.116 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (12ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:18:29.505 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:18:29.524 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:18:29.603 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]	
+[2025-03-19 10:18:29.663 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:18:29.672 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:18:32.880 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[DepartmentId] = @__departmentId_0	
+[2025-03-19 10:18:32.959 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:18:32.970 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:18:32.976 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:18:32.982 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:18:52.651 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:18:52.677 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:18:52.901 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]	
+[2025-03-19 10:18:53.126 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:18:53.152 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:18:55.012 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[DepartmentId] = @__departmentId_0	
+[2025-03-19 10:18:55.097 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:18:55.114 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:18:55.121 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:18:55.137 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:12.694 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:19:12.728 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:19:12.861 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]	
+[2025-03-19 10:19:13.068 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:13.095 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:18.470 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[DepartmentId] = @__departmentId_0	
+[2025-03-19 10:19:18.599 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (47ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]	
+[2025-03-19 10:19:18.818 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:18.836 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:18.852 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:18.868 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:35.483 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[DepartmentId] = @__departmentId_0	
+[2025-03-19 10:19:35.495 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]	
+[2025-03-19 10:19:35.720 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:35.728 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:35.740 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:35.746 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:40.099 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 10:19:40.115 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__p_0	
+[2025-03-19 10:19:40.124 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 10:19:40.382 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserDepartments] ([DepartmentId], [UserId])
+VALUES (@p0, @p1);	
+[2025-03-19 10:19:41.906 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]	
+[2025-03-19 10:19:43.551 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (11ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[DepartmentId] = @__departmentId_0	
+[2025-03-19 10:19:43.561 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:43.607 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (12ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:43.826 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:43.865 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:43.958 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:43.974 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:44.006 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:44.015 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:44.502 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[DepartmentId] = @__departmentId_0	
+[2025-03-19 10:19:44.647 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:44.664 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:44.677 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:44.692 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:44.700 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:44.709 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:54.268 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:19:54.448 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:19:54.805 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]	
+[2025-03-19 10:19:55.238 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (10ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:55.256 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:19:59.109 GMT 21	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 2	
+[2025-03-19 10:19:59.141 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 10:19:59.545 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (30ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 10:19:59.852 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (28ms) [Parameters=[@__userIds_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userIds_0) WITH ([value] int '$') AS [u0]
+)	
+[2025-03-19 10:20:00.357 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:00.369 GMT 7	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competencies for user with ID 1	
+[2025-03-19 10:20:00.398 GMT 21	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competencies for user with ID 10	
+[2025-03-19 10:20:00.477 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[UserId], [c].[TechnicalSkills], [c].[Communication], [c].[ProblemSolving], [c].[Teamwork], [c].[Leadership], [c].[LastUpdated], [c].[ManagerId]
+FROM [Competencies] AS [c]
+WHERE [c].[UserId] = @__userId_0	
+[2025-03-19 10:20:00.491 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (24ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[UserId], [c].[TechnicalSkills], [c].[Communication], [c].[ProblemSolving], [c].[Teamwork], [c].[Leadership], [c].[LastUpdated], [c].[ManagerId]
+FROM [Competencies] AS [c]
+WHERE [c].[UserId] = @__userId_0	
+[2025-03-19 10:20:00.509 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:00.533 GMT 5	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	No competencies found for user with ID 1	
+[2025-03-19 10:20:00.736 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:00.755 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:01.140 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:20:01.157 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:20:01.279 GMT 17	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]	
+[2025-03-19 10:20:01.485 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:01.505 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:02.969 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]	
+[2025-03-19 10:20:03.018 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (25ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[DepartmentId] = @__departmentId_0	
+[2025-03-19 10:20:03.238 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:03.249 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:03.270 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:03.282 GMT 21	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:03.350 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:03.382 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:34.678 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__request_Username_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__request_Username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END	
+[2025-03-19 10:20:34.700 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (8ms) [Parameters=[@__request_Email_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__request_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END	
+[2025-03-19 10:20:34.762 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (24ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 50), @p5='?' (Size = 100), @p6='?' (Size = 100), @p7='?' (Size = 4000), @p8='?' (Size = 15), @p9='?' (Size = 20), @p10='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Address], [BaseSalary], [DateOfBirth], [DateOfJoining], [Designation], [Email], [Name], [PasswordHash], [PhoneNumber], [Role], [UserName])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);	
+[2025-03-19 10:20:35.001 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:20:35.024 GMT 24	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 2	
+[2025-03-19 10:20:35.048 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:20:35.071 GMT 20	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 10:20:35.086 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 10:20:35.297 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:35.324 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:40.832 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:20:40.842 GMT 20	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:20:40.937 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]	
+[2025-03-19 10:20:41.026 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:41.038 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:43.160 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[DepartmentId] = @__departmentId_0	
+[2025-03-19 10:20:43.170 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]	
+[2025-03-19 10:20:43.427 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:43.480 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:43.523 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:43.536 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:43.554 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:43.567 GMT 20	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:50.836 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__p_0	
+[2025-03-19 10:20:50.846 GMT 20	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 10:20:50.850 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 10:20:50.883 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserDepartments] ([DepartmentId], [UserId])
+VALUES (@p0, @p1);	
+[2025-03-19 10:20:52.584 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]	
+[2025-03-19 10:20:53.575 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[DepartmentId] = @__departmentId_0	
+[2025-03-19 10:20:53.583 GMT 20	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:53.609 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:53.832 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:53.909 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:53.930 GMT 5	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:53.954 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:54.085 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:54.100 GMT 14	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:54.113 GMT 23	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:54.125 GMT 14	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:54.602 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[DepartmentId] = @__departmentId_0	
+[2025-03-19 10:20:54.749 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:54.759 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:54.770 GMT 20	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:54.781 GMT 22	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:54.788 GMT 19	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:54.798 GMT 24	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:54.959 GMT 14	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:20:54.977 GMT 14	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:21:41.716 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (23ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:21:41.758 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:21:50.711 GMT 3	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:21:50.750 GMT 19	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:21:50.946 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]	
+[2025-03-19 10:21:51.144 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:21:51.181 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:21:51.965 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:21:51.996 GMT 3	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:21:54.773 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:21:54.851 GMT 3	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 10:21:54.864 GMT 15	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 2	
+[2025-03-19 10:21:54.900 GMT 19	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (56ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:21:54.944 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (34ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 10:21:55.237 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (33ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:21:55.320 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (28ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:21:55.637 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:21:55.767 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (29ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:00.836 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:00.871 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:15.404 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:15.415 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:15.478 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]	
+[2025-03-19 10:22:15.549 GMT 3	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:15.560 GMT 3	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:16.520 GMT 3	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 2	
+[2025-03-19 10:22:16.542 GMT 19	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:16.547 GMT 27	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 10:22:16.552 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 10:22:16.563 GMT 3	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:22:16.689 GMT 19	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:16.707 GMT 19	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:23.114 GMT 27	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:23.134 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[GroupId]
+FROM [UserGroupMembers] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:23.157 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (8ms) [Parameters=[@__userGroups_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[GroupId], [u].[GroupName]
+FROM [UserGroups] AS [u]
+WHERE [u].[GroupId] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userGroups_0) WITH ([value] int '$') AS [u0]
+)	
+[2025-03-19 10:22:24.124 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:24.136 GMT 27	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 10:22:24.142 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:22:24.156 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__userIds_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userIds_0) WITH ([value] int '$') AS [u0]
+)	
+[2025-03-19 10:22:24.365 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:24.373 GMT 3	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:24.396 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:24.405 GMT 3	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:22:24.538 GMT 28	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:24.598 GMT 28	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:24.618 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:24.646 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:22:27.396 GMT 28	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 10:22:27.415 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userIds_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userIds_0) WITH ([value] int '$') AS [u0]
+)	
+[2025-03-19 10:22:27.418 GMT 7	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 2	
+[2025-03-19 10:22:27.438 GMT 28	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 10:22:27.630 GMT 7	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competencies for user with ID 10	
+[2025-03-19 10:22:27.636 GMT 3	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competencies for user with ID 1	
+[2025-03-19 10:22:27.650 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:27.682 GMT 19	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:27.695 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[UserId], [c].[TechnicalSkills], [c].[Communication], [c].[ProblemSolving], [c].[Teamwork], [c].[Leadership], [c].[LastUpdated], [c].[ManagerId]
+FROM [Competencies] AS [c]
+WHERE [c].[UserId] = @__userId_0	
+[2025-03-19 10:22:27.717 GMT 15	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	No competencies found for user with ID 1	
+[2025-03-19 10:22:27.727 GMT 3	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:27.736 GMT 27	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:27.874 GMT 29	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[UserId], [c].[TechnicalSkills], [c].[Communication], [c].[ProblemSolving], [c].[Teamwork], [c].[Leadership], [c].[LastUpdated], [c].[ManagerId]
+FROM [Competencies] AS [c]
+WHERE [c].[UserId] = @__userId_0	
+[2025-03-19 10:22:31.142 GMT 29	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 2	
+[2025-03-19 10:22:31.186 GMT 3	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 10:22:31.261 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]
+WHERE [d].[DepartmentId] = @__p_0	
+[2025-03-19 10:22:31.272 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:31.300 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:22:31.581 GMT 28	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:31.620 GMT 19	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:35.954 GMT 29	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:35.963 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:36.041 GMT 19	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]	
+[2025-03-19 10:22:36.107 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:36.116 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:36.806 GMT 27	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:36.817 GMT 29	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[GroupId]
+FROM [UserGroupMembers] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:36.828 GMT 28	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userGroups_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[GroupId], [u].[GroupName]
+FROM [UserGroups] AS [u]
+WHERE [u].[GroupId] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userGroups_0) WITH ([value] int '$') AS [u0]
+)	
+[2025-03-19 10:22:37.701 GMT 28	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:37.712 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 10:22:37.722 GMT 29	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:22:37.730 GMT 28	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userIds_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userIds_0) WITH ([value] int '$') AS [u0]
+)	
+[2025-03-19 10:22:38.071 GMT 3	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:38.088 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:38.108 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:38.133 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:38.163 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:22:38.326 GMT 29	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:22:38.396 GMT 19	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (11ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:38.441 GMT 28	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:38.646 GMT 7	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 10:22:38.652 GMT 28	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competency with ID 2	
+[2025-03-19 10:22:38.677 GMT 27	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userIds_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userIds_0) WITH ([value] int '$') AS [u0]
+)	
+[2025-03-19 10:22:38.689 GMT 29	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CompetencyId], [c].[Communication], [c].[LastUpdated], [c].[Leadership], [c].[ManagerId], [c].[ProblemSolving], [c].[Teamwork], [c].[TechnicalSkills], [c].[UserId]
+FROM [Competencies] AS [c]
+WHERE [c].[CompetencyId] = @__p_0	
+[2025-03-19 10:22:38.992 GMT 19	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:39.044 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:39.122 GMT 3	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competencies for user with ID 1	
+[2025-03-19 10:22:39.131 GMT 15	Information	0	EmployeePortal.API.Controllers.CompetencyController]	Getting competencies for user with ID 10	
+[2025-03-19 10:22:39.181 GMT 28	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[UserId], [c].[TechnicalSkills], [c].[Communication], [c].[ProblemSolving], [c].[Teamwork], [c].[Leadership], [c].[LastUpdated], [c].[ManagerId]
+FROM [Competencies] AS [c]
+WHERE [c].[UserId] = @__userId_0	
+[2025-03-19 10:22:39.203 GMT 27	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[UserId], [c].[TechnicalSkills], [c].[Communication], [c].[ProblemSolving], [c].[Teamwork], [c].[Leadership], [c].[LastUpdated], [c].[ManagerId]
+FROM [Competencies] AS [c]
+WHERE [c].[UserId] = @__userId_0	
+[2025-03-19 10:22:39.231 GMT 28	Warning	0	EmployeePortal.API.Controllers.CompetencyController]	No competencies found for user with ID 1	
+[2025-03-19 10:22:39.460 GMT 3	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:39.499 GMT 19	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:40.247 GMT 29	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:40.262 GMT 25	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[DepartmentId]
+FROM [UserDepartments] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:40.337 GMT 29	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId]
+FROM [Departments] AS [d]	
+[2025-03-19 10:22:40.431 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:40.448 GMT 28	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:22:41.839 GMT 15	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:41.850 GMT 29	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[GroupId]
+FROM [UserGroupMembers] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:22:41.861 GMT 29	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userGroups_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[GroupId], [u].[GroupName]
+FROM [UserGroups] AS [u]
+WHERE [u].[GroupId] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userGroups_0) WITH ([value] int '$') AS [u0]
+)	
+[2025-03-19 10:23:44.473 GMT 27	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:23:44.485 GMT 34	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__managerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [d].[DepartmentId], [d].[DepartmentName], [d].[ManagerId], [u].[UserId], [u].[DepartmentId]
+FROM [Departments] AS [d]
+LEFT JOIN [UserDepartments] AS [u] ON [d].[DepartmentId] = [u].[DepartmentId]
+WHERE [d].[ManagerId] = @__managerId_0
+ORDER BY [d].[DepartmentId], [u].[UserId]	
+[2025-03-19 10:23:44.492 GMT 32	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:23:44.509 GMT 34	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (6ms) [Parameters=[@__userIds_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Address], [u].[BaseSalary], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Email], [u].[Name], [u].[PasswordHash], [u].[PhoneNumber], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] IN (
+    SELECT [u0].[value]
+    FROM OPENJSON(@__userIds_0) WITH ([value] int '$') AS [u0]
+)	
+[2025-03-19 10:23:45.135 GMT 29	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:23:45.159 GMT 26	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:23:45.176 GMT 32	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__userId_0	
+[2025-03-19 10:23:45.189 GMT 29	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:23:45.211 GMT 32	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:23:45.361 GMT 27	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	
+[2025-03-19 10:23:45.414 GMT 36	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[MetricId], [p].[AttendanceRate], [p].[CustomerSatisfaction], [p].[Efficiency], [p].[LastUpdated], [p].[ManagerId], [p].[QualityOfWork], [p].[TaskCompletionRate], [p].[Teamwork], [p].[UserId]
+FROM [PerformanceMetrics] AS [p]
+WHERE [p].[UserId] = @__userId_0	
+[2025-03-19 10:23:45.453 GMT 37	Information	Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted	Microsoft.EntityFrameworkCore.Database.Command]	Executed DbCommand (11ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Name], [u].[Email], [u].[PhoneNumber], [u].[Address], [u].[DateOfBirth], [u].[DateOfJoining], [u].[Designation], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__id_0	

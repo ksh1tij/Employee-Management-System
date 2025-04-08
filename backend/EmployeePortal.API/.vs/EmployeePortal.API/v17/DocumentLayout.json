@@ -1,7 +1,47 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|c:\\code\\employee portal\\backend\\employeeportal.api\\employeeportal.api\\controllers\\usergroupmembercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|solutionrelative:employeeportal.api\\controllers\\usergroupmembercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|c:\\code\\employee portal\\backend\\employeeportal.api\\employeeportal.api\\controllers\\usergroupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|solutionrelative:employeeportal.api\\controllers\\usergroupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|c:\\code\\employee portal\\backend\\employeeportal.api\\employeeportal.api\\controllers\\userdepartmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|solutionrelative:employeeportal.api\\controllers\\userdepartmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|c:\\code\\employee portal\\backend\\employeeportal.api\\employeeportal.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|solutionrelative:employeeportal.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|c:\\code\\employee portal\\backend\\employeeportal.api\\employeeportal.api\\controllers\\performancemetriccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|solutionrelative:employeeportal.api\\controllers\\performancemetriccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|c:\\code\\employee portal\\backend\\employeeportal.api\\employeeportal.api\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|solutionrelative:employeeportal.api\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|c:\\code\\employee portal\\backend\\employeeportal.api\\employeeportal.api\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|solutionrelative:employeeportal.api\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|c:\\code\\employee portal\\backend\\employeeportal.api\\employeeportal.api\\controllers\\competencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|solutionrelative:employeeportal.api\\controllers\\competencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3BA0268-85F6-4344-B9D7-121ADABF8FE5}|..\\EmployeePortal.Tests\\EmployeePortal.Tests.csproj|c:\\code\\employee portal\\backend\\employeeportal.tests\\controllers\\competencycontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|c:\\code\\employee portal\\backend\\employeeportal.api\\employeeportal.api\\data\\employeemanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5C84729-C3D8-4AF7-ADBF-F5CF81F05FA2}|EmployeePortal.API\\EmployeePortal.API.csproj|solutionrelative:employeeportal.api\\data\\employeemanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +49,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +62,136 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserGroupMemberController.cs",
+              "DocumentMoniker": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\UserGroupMemberController.cs",
+              "RelativeDocumentMoniker": "EmployeePortal.API\\Controllers\\UserGroupMemberController.cs",
+              "ToolTip": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\UserGroupMemberController.cs",
+              "RelativeToolTip": "EmployeePortal.API\\Controllers\\UserGroupMemberController.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAswG8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T08:19:17.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserGroupController.cs",
+              "DocumentMoniker": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\UserGroupController.cs",
+              "RelativeDocumentMoniker": "EmployeePortal.API\\Controllers\\UserGroupController.cs",
+              "ToolTip": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\UserGroupController.cs",
+              "RelativeToolTip": "EmployeePortal.API\\Controllers\\UserGroupController.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAswJMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T08:19:04.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserDepartmentController.cs",
+              "DocumentMoniker": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\UserDepartmentController.cs",
+              "RelativeDocumentMoniker": "EmployeePortal.API\\Controllers\\UserDepartmentController.cs",
+              "ToolTip": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\UserDepartmentController.cs",
+              "RelativeToolTip": "EmployeePortal.API\\Controllers\\UserDepartmentController.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAswJIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T08:18:54.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "EmployeePortal.API\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "EmployeePortal.API\\Controllers\\UserController.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAAAswN8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T08:18:40.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PerformanceMetricController.cs",
+              "DocumentMoniker": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\PerformanceMetricController.cs",
+              "RelativeDocumentMoniker": "EmployeePortal.API\\Controllers\\PerformanceMetricController.cs",
+              "ToolTip": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\PerformanceMetricController.cs",
+              "RelativeToolTip": "EmployeePortal.API\\Controllers\\PerformanceMetricController.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAswJQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T08:18:27.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NotificationsController.cs",
+              "DocumentMoniker": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\NotificationsController.cs",
+              "RelativeDocumentMoniker": "EmployeePortal.API\\Controllers\\NotificationsController.cs",
+              "ToolTip": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\NotificationsController.cs",
+              "RelativeToolTip": "EmployeePortal.API\\Controllers\\NotificationsController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAswB4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T08:18:23.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DepartmentController.cs",
+              "DocumentMoniker": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\DepartmentController.cs",
+              "RelativeDocumentMoniker": "EmployeePortal.API\\Controllers\\DepartmentController.cs",
+              "ToolTip": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\DepartmentController.cs",
+              "RelativeToolTip": "EmployeePortal.API\\Controllers\\DepartmentController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAswFoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T08:18:11.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CompetencyController.cs",
+              "DocumentMoniker": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\CompetencyController.cs",
+              "RelativeDocumentMoniker": "EmployeePortal.API\\Controllers\\CompetencyController.cs",
+              "ToolTip": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Controllers\\CompetencyController.cs",
+              "RelativeToolTip": "EmployeePortal.API\\Controllers\\CompetencyController.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAswKQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T08:10:36.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmployeeManagementContext.cs",
+              "DocumentMoniker": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Data\\EmployeeManagementContext.cs",
+              "RelativeDocumentMoniker": "EmployeePortal.API\\Data\\EmployeeManagementContext.cs",
+              "ToolTip": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.API\\EmployeePortal.API\\Data\\EmployeeManagementContext.cs",
+              "RelativeToolTip": "EmployeePortal.API\\Data\\EmployeeManagementContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T06:59:40.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CompetencyControllerTests.cs",
+              "DocumentMoniker": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.Tests\\Controllers\\CompetencyControllerTests.cs",
+              "RelativeDocumentMoniker": "..\\EmployeePortal.Tests\\Controllers\\CompetencyControllerTests.cs",
+              "ToolTip": "C:\\Code\\Employee Portal\\backend\\EmployeePortal.Tests\\Controllers\\CompetencyControllerTests.cs",
+              "RelativeToolTip": "..\\EmployeePortal.Tests\\Controllers\\CompetencyControllerTests.cs",
+              "ViewState": "AgIAADIBAAAAAAAAAAAAAD4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T06:56:49.974Z",
+              "EditorCaption": ""
             }
           ]
         }
