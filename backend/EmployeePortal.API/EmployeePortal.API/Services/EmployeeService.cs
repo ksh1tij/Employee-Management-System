@@ -65,7 +65,7 @@ namespace EmployeePortal.API.Services
                         Designation = designation,
                         Role = role ?? throw new Exception("Role is required"),
                         UserName = userName ?? throw new Exception("UserName is required"),
-                        PasswordHash = passwordHash ?? throw new Exception("PasswordHash is required"),
+                        Hash = passwordHash ?? throw new Exception("Hash is required"),
                         BaseSalary = baseSalary,
                         PerformanceMetrics = new List<PerformanceMetric>(),
                         Competencies = new List<Competency>(),
@@ -112,7 +112,7 @@ namespace EmployeePortal.API.Services
                    worksheet.Cells[1, 7].Text == "Designation" &&
                    worksheet.Cells[1, 8].Text == "Role" &&
                    worksheet.Cells[1, 9].Text == "UserName" &&
-                   worksheet.Cells[1, 10].Text == "PasswordHash" &&
+                   worksheet.Cells[1, 10].Text == "Hash" &&
                    worksheet.Cells[1, 11].Text == "BaseSalary";
         }
 
@@ -137,7 +137,7 @@ namespace EmployeePortal.API.Services
         //            var designation = csv.GetField("Designation");
         //            var role = csv.GetField("Role");
         //            var userName = csv.GetField("UserName");
-        //            var passwordHash = csv.GetField("PasswordHash");
+        //            var passwordHash = csv.GetField("Hash");
         //            var baseSalaryString = csv.GetField("BaseSalary");
 
         //            var dateOfBirth = dateOfBirthString != null ? ParseDate(dateOfBirthString) : null;
@@ -155,7 +155,7 @@ namespace EmployeePortal.API.Services
         //                Designation = designation,
         //                Role = role ?? throw new Exception("Role is required"),
         //                UserName = userName ?? throw new Exception("UserName is required"),
-        //                PasswordHash = passwordHash ?? throw new Exception("PasswordHash is required"),
+        //                Hash = passwordHash ?? throw new Exception("Hash is required"),
         //                BaseSalary = baseSalary,
         //                PerformanceMetrics = new List<PerformanceMetric>(),
         //                Competencies = new List<Competency>(),
@@ -179,7 +179,7 @@ namespace EmployeePortal.API.Services
         //    return headers.Contains("Name") && headers.Contains("Email") && headers.Contains("PhoneNumber") &&
         //           headers.Contains("Address") && headers.Contains("DateOfBirth") && headers.Contains("DateOfJoining") &&
         //           headers.Contains("Designation") && headers.Contains("Role") && headers.Contains("UserName") &&
-        //           headers.Contains("PasswordHash") && headers.Contains("BaseSalary");
+        //           headers.Contains("Hash") && headers.Contains("BaseSalary");
         //}
     }
 }

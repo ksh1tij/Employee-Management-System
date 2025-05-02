@@ -113,7 +113,7 @@ namespace EmployeePortal.API.Controllers
                 Designation = userDto.Designation,
                 Role = userDto.Role,
                 UserName = userDto.UserName,
-                PasswordHash = passwordHelper.HashPassword("Default_Password"), // Hash the password
+                Hash = passwordHelper.HashPassword("Default_Password"), // Hash the password
                 PerformanceMetrics = new List<PerformanceMetric>(),
                 Competencies = new List<Competency>(),
                 UserGroupMembers = new List<UserGroupMember>()
@@ -161,7 +161,7 @@ namespace EmployeePortal.API.Controllers
             var passwordHelper = new PasswordHelper(_configuration);
 
             // Check the original password
-            if (!passwordHelper.VerifyPassword(request.OriginalPassword, user.PasswordHash))
+            if (!passwordHelper.VerifyPassword(request.OriginalPassword, user.Hash))
             {
                 return BadRequest("Original password is incorrect.");
             }
@@ -174,10 +174,10 @@ namespace EmployeePortal.API.Controllers
             user.Designation = request.Designation;
             user.UserName = request.UserName;
 
-            // If a new password is provided, hash it and update the PasswordHash
+            // If a new password is provided, hash it and update the Hash
             if (!string.IsNullOrEmpty(request.NewPassword))
             {
-                user.PasswordHash = passwordHelper.HashPassword(request.NewPassword);
+                user.Hash = passwordHelper.HashPassword(request.NewPassword);
             }
 
             if (!ModelState.IsValid)

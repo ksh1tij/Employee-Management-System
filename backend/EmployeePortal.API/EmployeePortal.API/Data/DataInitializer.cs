@@ -36,7 +36,7 @@ namespace EmployeePortal.API.Data
                         Designation = "Software Engineer",
                         Role = "Employee",
                         UserName = "alice.johnson",
-                        PasswordHash = "hashedpassword1",
+                        Hash = "hashedpassword1",
                         PerformanceMetrics = new List<PerformanceMetric>(),
                         Competencies = new List<Competency>(),
                         UserGroupMembers = new List<UserGroupMember>()
@@ -52,7 +52,7 @@ namespace EmployeePortal.API.Data
                         Designation = "Project Manager",
                         Role = "Manager",
                         UserName = "bob.smith",
-                        PasswordHash = "hashedpassword2",
+                        Hash = "hashedpassword2",
                         PerformanceMetrics = new List<PerformanceMetric>(),
                         Competencies = new List<Competency>(),
                         UserGroupMembers = new List<UserGroupMember>()
@@ -68,7 +68,7 @@ namespace EmployeePortal.API.Data
                         Designation = "Administrator",
                         Role = "Admin",
                         UserName = "charlie.brown",
-                        PasswordHash = "hashedpassword3",
+                        Hash = "hashedpassword3",
                         PerformanceMetrics = new List<PerformanceMetric>(),
                         Competencies = new List<Competency>(),
                         UserGroupMembers = new List<UserGroupMember>()

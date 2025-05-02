@@ -28,7 +28,7 @@ namespace EmployeePortal.API.Services
 
             var passwordHelper = new PasswordHelper(_configuration);
 
-            if (user == null || !passwordHelper.VerifyPassword(request.Password, user.PasswordHash))
+            if (user == null || !passwordHelper.VerifyPassword(request.Password, user.Hash))
             {
                 return new AuthResult(false, "Invalid username or password.", string.Empty);
             }
@@ -57,7 +57,7 @@ namespace EmployeePortal.API.Services
                 UserName = request.Username,
                 Email = request.Email,
                 Name = request.Username, // Assuming the username is used as the name
-                PasswordHash = passwordHelper.HashPassword(request.Password),
+                Hash = passwordHelper.HashPassword(request.Password),
                 Role = "User", // Default role, adjust as needed
                 PerformanceMetrics = [],
                 Competencies = [],

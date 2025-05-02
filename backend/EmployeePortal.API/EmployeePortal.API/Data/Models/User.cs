@@ -46,7 +46,7 @@ namespace EmployeePortal.API.Data.Models
         public required string UserName { get; set; } // User's username for login
 
         [Required]
-        public required string PasswordHash { get; set; } // Hashed password for secure authentication
+        public required string Hash { get; set; } // Hashed password for secure authentication
 
         // Navigation Properties
         public required ICollection<PerformanceMetric> PerformanceMetrics { get; set; } // One-to-many relationship with performance metrics
